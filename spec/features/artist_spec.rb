@@ -29,7 +29,7 @@ describe 'artist form' do
     fill_in 'artist[bio]', with: "My artist bio"
 
     click_on "Create Artist"
-
+    #binding.pry
     expect(page).to have_content("My artist name")
   end
 
@@ -40,7 +40,7 @@ describe 'artist form' do
 
     fill_in 'artist[name]', with: "My edit"
     fill_in 'artist[bio]', with: "My artist bio"
-
+    #binding.pry
     click_on "Update Artist"
 
     expect(page).to have_content("My edit")
